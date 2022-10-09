@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>
+            Nipuni S Ranathunga
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css" >
+        <link rel="stylesheet" media="screen and (max-width:800px)" href="tablet.css">
+        <link rel="stylesheet" media="screen and (max-width:530px)" href="phone.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#hireme">Hire Me</a></li>
+            </ul>
+        </nav>
+        <section id="home">
+            <div class="main">
+                <h1 class="headings">I AM <br> Nipuni S Ranathunga</h1>
+                <a href="https://www.linkedin.com/in/nipuni-s-ranathunga-772373206">
+                <button class="btn" href="https://www.linkedin.com/in/nipuni-s-ranathunga-772373206">
+                    Hire Me     
+                </button></a>
+            </div>
+        </section>
+        <section id="about">
+            <h1 class="headings">About Me</h1>
+            <div id="pic">
+                <img src="https://i.pinimg.com/1200x/9e/34/22/9e3422152180909e97c603a156dd2ee4.jpg" alt="">
+                <div id="intro">
+                    <h2 class="aboutname">Nipuni S Ranathunga.</h2>
+                    <p>
+                        I am Nipuni Sathsara Ranathunga.<br> I am a Undergraduate of University of Moratuwa.<br>
+                        I did my O/L's at R/Gamini Central College, Kalawana and A/L's at R/Sivali Central College, Ratnapura.<br>
+                        The degree I am following is the BSc(Hons) in Information Technology and Management.<br>
+                        I am an enthusiastic hardworking and flexible undergraduate of the Faculty of Information Technology,
+                        Univercity of Moratuwa with a keen interest in web development<br>
+                        I am a self motivated, hard working individual who would love to explore and gain new experiences in the uttered field.<br>
+                        I am a fast learner and a team player.<br>
+                        I am a person who is willing to learn new things and I am a person who is willing to work hard to achieve my goals.<br>
+                        I have 8 months work experience in peoples' bank as a teller.<br>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <h1 class="headings">PORTFOLIO</h1>
+            <div class="gallery">
+                <img src="1.jpg" alt="">
+                <img src="2.jpg" alt="">
+                <img src="3.jpg" alt="">
+                <img src="4.jpeg" alt="">
+                <img src="5.jpeg" alt="">
+                <img src="6.jpeg" alt="">
+            </div>
+        </section>
+        <section id="education">
+            <h1 class="headings">Education</h1>
+            <div class="row">
+                <div class="box">
+                    <h2 class="headings">Result</h2>
+                    <table border="1" class="table">
+                        <tr><th colspan="2">Odinary Level-2017</th></tr>
+                        <tr><th>Subject</th><th>Result</th></tr>
+                        <tr><td>Maths</td><td>A</td></tr>
+                        <tr><td>Science</td><td>A</td></tr>
+                        <tr><td>Sinhala</td><td>A</td></tr>
+                        <tr><td>English</td><td>A</td></tr>
+                        <tr><td>History</td><td>A</td></tr>
+                        <tr><td>Buddhism</td><td>A</td></tr>
+                        <tr><td>Commerce</td><td>A</td></tr>
+                        <tr><td>Music</td><td>A</td></tr>
+                        <tr><td>ICT</td><td>A</td></tr>
+                    </table>
+                </div>
+                <div class="box">
+                    <h2 class="headings">Result</h2>
+                    <table border="1" class="table">
+                        <tr><th colspan="2">Advanced Level-2020</th></tr>
+                        <tr><th>Subject</th><th>Result</th></tr>
+                        <tr><td>ICT</td><td>A</td></tr>
+                        <tr><td>Accounting</td><td>A</td></tr>
+                        <tr><td>Econ</td><td>B</td></tr>
+                        <tr><td>General English</td><td>B</td></tr>
+                        <tr><td>Common General Test</td><td>066</td></tr>
+                        
+                    </table>
+                </div>
+                <div class="box">
+                    <h2 class="headings">University</h2>
+                    <p class="para">
+                        I am currently studying at the Faculty of Information Technology,<a href="https://uom.lk/">University of Moratuwa.</a><br><br>
+                        I am studying<a href="https://uom.lk/itfac/education/undergraduate/it-managemant">BSc(Hons) in Information Technology and Management.</a><br><br>
+                        I am in the 1st semester of my degree.<br><br>
+                        I am in the 1st year of my degree.<br><br>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="hireme">
+            <script type="module">
+                import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+                import { getDatabase,set,ref } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-database.js";
+
+              
+                const firebaseConfig = {
+                  apiKey: "AIzaSyDBmbjUQDmyd3pLYl9nTSLDpxSsJaHN22o",
+                  authDomain: "personal-website-cb539.firebaseapp.com",
+                  databaseURL: "https://personal-website-cb539-default-rtdb.asia-southeast1.firebasedatabase.app",
+                  projectId: "personal-website-cb539",
+                  storageBucket: "personal-website-cb539.appspot.com",
+                  messagingSenderId: "763328659619",
+                  appId: "1:763328659619:web:51251fcfc073ec7956bf16"
+                };
+              
+                // Initialize Firebase
+                const app = initializeApp(firebaseConfig);
+                const db = getDatabase(app);
+
+                document.getElementById("userform").addEventListener("submit",function(e){
+                e.preventDefault();
+                    let name = document.getElementById("name").value;
+                    let email = document.getElementById("email").value;
+                    let msg = document.getElementById("msg").value;
+                    set(ref(db, 'users/' + name), {
+                    email: email,
+                    msg:msg,
+                    });
+               });
+
+              </script>
+            <h1 class="headings">Hire Me</h1>
+            <form action="" class="form" method="post" id="userform">
+                <input type="text" name="name" class="input" id="name" placeholder="Enter Your Name" required>
+                <input type="email" name="email" class="input" id="email" placeholder="Enter Your Email" required>
+                <textarea name="msg" id="msg" cols="50" rows="10" placeholder="Enter Your Message"></textarea>
+                <input type="submit" value="SEND" id="send">
+            </form>
+            <div class="social_links">
+             <a href="https://www.facebook.com/nipuni.s.ranathunga">Facebook</a>
+             <a href=" https://www.instagram.com/invites/contact/?i=fm4ffvueo7gh&utm_content=pizm277">Instagram</a>
+             <a href="https://www.linkedin.com/in/nipuni-s-ranathunga-772373206">Linkedin</a>
+            </div>
+        </section>
+    </body>
+</html>
